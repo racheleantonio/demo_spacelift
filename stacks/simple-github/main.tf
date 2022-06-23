@@ -1,5 +1,9 @@
+variable "github_owner" {
+  type = string 
+}
+
 provider "github" {
-  owner = "racheleantonio"
+  owner = var.github_owner
 }
 
 resource "github_repository" "my_repo" {
